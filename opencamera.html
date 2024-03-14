@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera-Verification</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/3949771dc3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        
+        <div class="navbarleft">
+            <!-- <img src="./images/logo.png" alt=""> -->
+            <a href="">Accounts</a>
+            <a href="">Deposits</a>
+            <a href="">Payments</a>
+            <a href="">Cards</a>
+            <a href="">Loans</a>
+            <a href="">Investments</a>
+            <a href="">Services</a>
+            <div class="showoff">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+                <div class="profile"><p style="text-align: center; margin-top:5px;color:black;font-weight:200" id="profilename"></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="documentshero">
+        <div class="mainhead"><h1 style=color:#002080>Live Camera Verification</h1></div>
+        <div class="webcamdiv">
+            <video style="border-radius: 10px; border:2px solid black;" id="webcam" autoplay playsinline width="400" height="400"></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <div class="cameraoptions">
+            <a href="#"><button id="captureimage">Capture Image</button></a>
+            <a href="#"><button id="captureimage1">Retake</button></a>
+        </div>
+        </div>
+        <button id="contninuetonextbtn">Next Step</button>
+</body>
+<script type="module" src="camera.js"></script>
+<script>document.getElementById("contninuetonextbtn").addEventListener("click",function()
+    {
+        window.open("ocrverifivation.html","_parent");
+    } )</script>
+</html>

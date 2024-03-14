@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/3949771dc3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        
+        <div class="navbarleft">
+            <!-- <img src="./images/logo.png" alt=""> -->
+            <a href="">Accounts</a>
+            <a href="">Deposits</a>
+            <a href="">Payments</a>
+            <a href="">Cards</a>
+            <a href="">Loans</a>
+            <a href="">Investments</a>
+            <a href="">Services</a>
+            <div class="showoff">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+                <div class="profile"><p style="text-align: center; margin-top:5px;color:black;font-weight:200" id="profilename"></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="herosection">
+        <div class="mainhead"><h1 style=color:#002080>Online KYC Verification</h1></div>
+        <div class="kycmain">
+
+            <img src="Resources/kyc photo.jpg" alt="KYC" class="kycimg" >
+            
+            <div class="whatkyc">
+                <br>
+                <br>
+                <h4>What is KYC?</h4><br>
+                <p>KYC ensures the authentication of your identity, address, and signature, among other details, and is essential for investing in mutual funds or opening a bank account. Failure to provide valid KYC documents may lead financial institutions such as banks or Asset Management Companies to deny you the chance to open an account or participate in mutual fund schemes.</p>
+            </div>
+            <div class="whykyc">
+                <br><br>
+                <h4>Why KYC?</h4><br>
+                <p>
+                    Since 2004, the Reserve Bank of India, as the central banking authority, has mandated KYC compliance for all banks and financial institutions in the country. KYC serves as a vital measure not just for confirming identities but also as a protective barrier against money laundering and various illicit activities.</p>
+            </div>
+
+        </div>
+        <div class="secondkyc">
+            <h2 style=color:#002080>List of documents needed for KYC Verification</h2><br><br>
+            <ul class="kyclist">
+                <li style="color:#4d79ff"><b style="color: #f78914;"> Documents</b> - Pan Card and Passport size Photograph</li><br>
+                <li style="color:#4d79ff"><b style="color: #f78914;">Identity Proof</b> - any one of PAN card, Aadhaar Card</li><br>
+                <li style="color:#4d79ff"><b style="color: #f78914;">Address Proof</b> - any one of Passport, Driving Licence, Aadhaar Card, Bank Statement, Utility bills</li><br>
+                <li style="color:#4d79ff"><b style="color: #f78914;">Income Proof</b> - any one of Salary slip (latest), ITR (latest), Bank Statement (6 months)</li><br>
+                <li style="color:#4d79ff"><b style="color: #f78914;">Account Linking </b>- Cancelled Cheque</li><br>
+
+            </ul>
+            <div class="kycdocu">
+                <img src="Resources/kycdocu.jpg" alt="KYC" >
+
+            </div>
+            <button class="submit" id="openkyc"><b>ONLINE KYC VERIFICATION</b></button>
+            
+        </div>
+
+
+
+    </div>
+    <script type="module" src="homepage.js"></script>
+    <script> document.getElementById("openkyc").addEventListener("click",function()
+        {
+          window.open("verification.html","_parent");
+        })</script>
+</body>
+</html>

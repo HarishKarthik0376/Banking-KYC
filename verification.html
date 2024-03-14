@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification KYC</title>
+    <link rel="stylesheet" href="verification.css">
+</head>
+<body>
+    <div class="navbar">
+        
+        <div class="navbarleft">
+            <!-- <img src="./images/logo.png" alt=""> -->
+            <a href="">Accounts</a>
+            <a href="">Deposits</a>
+            <a href="">Payments</a>
+            <a href="">Cards</a>
+            <a href="">Loans</a>
+            <a href="">Investments</a>
+            <a href="">Servies</a>
+            <div class="showoff">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+                <div class="profile"><p style="text-align: center; margin-top:5px;color:black;font-weight:200" id="profilename"></p></div>
+            </div>
+        </div>
+    </div>
+    <h2 class="kycdetails">KYC VERIFICATION BASIC DETAILS</h2>
+    <div class="registerblock">
+        <br>
+        
+        <span style="color: black;">Enter Name:</span><input type="text" id="verficationname"><br>
+        <span style="color: black;">Enter DOB:</span><input type="date" id="verificationdate"><br>
+        <span style="color: black;">Enter Address:</span><textarea rows="4" id="verificationaddress"></textarea><br>
+        <span style="color: black;">Enter PAN Card Number:</span><input type="text"!important id="varificationpan"><br>
+        <span style="color: black;">Enter Aadhar Number:</span><input type="text" !important id="verificationaadhar"><br>
+        <span style="color: black;">Enter Income range:</span><select id="incomeRange" name="incomeRange">
+            <option value="0-20000">Rs 0 - Rs 20,000</option>
+            <option value="20001-40000">Rs 20,001 - Rs 40,000</option>
+            <option value="40001-60000">Rs 40,001 - Rs 60,000</option>
+            <option value="60001-80000">Rs 60,001 - Rs 80,000</option>
+            <option value="80001-100000">Rs 80,001 - Rs 100,000</option>
+            <option value="above100000">Above Rs 100,000</option>
+          </select>
+          <br>
+        <span style="color: black;">Type of Employment:</span><input type="text" id="verificationemployment"><br>
+        <button class="next" id="next">NEXT</button>
+
+        
+        
+    </div>
+    
+    
+    <script type="module" src="verification.js"></script>
+</body>
+</html>

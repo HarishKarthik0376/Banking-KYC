@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Step</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <div class="navbar">
+        
+        <div class="navbarleft">
+            <!-- <img src="./images/logo.png" alt=""> -->
+            <a href="">Accounts</a>
+            <a href="">Deposits</a>
+            <a href="">Payments</a>
+            <a href="">Cards</a>
+            <a href="">Loans</a>
+            <a href="">Investments</a>
+            <a href="">Servies</a>
+            <div class="showoff">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+                <div class="profile"><p style="text-align: center; margin-top:5px;color:black;font-weight:200" id="profilename"></p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="documentshero">
+    <div class="mainhead"><h1 style=color:#002080>Confirm And Start Verification</h1></div>
+    <div class="startverfiydiv">
+        <div class="detailsdisplay" style="margin-top: -105px;margin-left:40px;display:flex;flex-direction:column;gap:10%;position:absolute;left:30%;transform:translate(-30%,40%);">
+            <span class="grpdis">Name:</span><p id="displayname"></p>
+            <span class="grpdis">DOB:</span><p id="displaydob"></p>
+            <span class="grpdis">Aadhaar Number:</span><p id="displayaadhar"></p>
+            <span class="grpdis">Pan Number:</span><p id="displaypan"></p>
+            <span class="grpdis">Address:</span><p id="displayaddress"></p>
+            <span class="grpdis">Type of document uploaded:</span><p id="displayuploaded"></p>
+            <img src="" id="imgtoshow" style="width: 130px; height:110px;">
+        </div>
+        <button class="startverification"id = "startverification">Start Verification</button>
+        <p id="verificationstatus">Status</p>
+        
+    </div>
+    <script type="module" src="ocerverify.js"></script>
+    <script src="https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    height: 800px;
+    background-color: #bcc8ed;
+}
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color: #ff8533;
+
+    position: sticky;
+    margin: 0;
+    
+}
+.navbarleft{
+    margin-top: 0;
+    padding-top: 20px;
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly!important;
+    
+
+}
+
+.navbar a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size:medium;
+    display: flex;
+    
+}
+.showoff{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+i{
+    font-size: 20px;
+    color: black;
+    padding:5px 20px; 
+}
+.profile{
+    width: 90px;
+    height: 30px;
+    background-color: beige;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile p{
+    align-items: center;
+    justify-content: center;
+
+}
+.kycdetails{
+    
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    color: #002080;
+}
+.registerblock{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 600px;
+    background-color: #ffdcba ;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: 66px;
+    padding-top: 10px;
+    border-radius: 10px ;
+    
+    
+    
+}
+
+.registerblock input{
+    width: 75%;
+    height: 30px;
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.registerblock span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    
+}
+.registerblock textarea{
+    width: 76%;
+    height: 30px;
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.registerblock select{
+    width: 78%;
+    height: 32px;
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.next{
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    left: 30%;
+    cursor: pointer;
+    background-color: #002080;
+    color: #ff8533;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,359 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color: #ff8533;
+
+    position: sticky;
+    margin: 0;
+    
+}
+.navbarleft{
+    margin-top: 0;
+    padding-top: 20px;
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly!important;
+    
+
+}
+
+.navbar a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size:medium;
+    display: flex;
+    
+}
+.showoff{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+i{
+    font-size: 20px;
+    color: black;
+    padding:5px 20px; 
+}
+.profile{
+    width: 90px;
+    height: 30px;
+    background-color: beige;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile p{
+    align-items: center;
+    justify-content: center;
+
+}
+.mainhead{
+    position: absolute;
+    top: 17%;
+    left: 37%;
+}
+.kycimg{
+    width: 50%;
+    height: 450px;
+    position: absolute;
+    top: 170px;
+    left: 40px;
+}
+.whatkyc{
+    position: absolute;
+    right: 40px;
+    top: 150px;
+    width: 500px;
+    margin-right: 10px;
+}
+.whykyc{
+    position: absolute;
+    right: 40px;
+    top: 350px;
+    width: 500px;
+    margin-right: 10px;
+
+}
+.kycmain h4{
+    color:#002080 ;
+}
+.kycmain p,h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.secondkyc{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left:10px;
+    top: 100%;
+}
+.secondkyc h2{
+    position: relative;
+    left: 33%;
+    top: 5px;
+}
+.kyclist{
+    position: relative;
+    top: 10px;
+    padding-left: 26px;
+    width: 52%;
+    height: 230px;
+    
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.kycdocu{
+    position: relative;
+    left: 56%;
+    bottom: 60%;
+    
+    right: 10px;
+    padding-left: 15px;
+
+}
+.kycdocu img{
+    width: 450px;
+    height: 280px;
+}
+.submit{
+    position: relative;
+    bottom:28% ;
+    left: 30%;
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:#002080;
+    color:#ff8533;
+
+}
+/*upload documents*/
+.selectdocumenttype
+{
+    position: absolute;
+    left: 39%;
+    top: 30%;
+    width: 390px;
+    display: flex;
+    gap: 4%;
+}
+.confirm
+{
+    width: 190px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+#contninuetonextbtn
+{   position: relative;
+    left: 1300px;
+    width: 140px;
+    margin-top: 20px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:#002080;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+
+}
+.documentshero
+{
+    display: flex;
+    flex-direction: column;
+}
+#documentsselect
+{
+    width: 390px;
+    border-radius: 10px;
+    background-color: white;
+    height: 70px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid black;
+}
+.sectiontoupload
+{   position: absolute;
+    left: 32.5%;
+    top: 45%;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid black;
+    width: 590px;
+    height: 300px;
+    display: none;
+}
+.frontpic
+{
+    background-color: white;
+    border: 2px solid black;
+    border-style: dotted;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,10%);
+    cursor: pointer;
+    user-select: none;
+}
+#imageupload
+{
+    width: 50px;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+.inititaldiv
+{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 100px;
+}
+#frontchoosefile
+{
+    position: absolute;
+    left: 100px;
+    top: 35px;
+}
+#backchoosefile
+{
+    position: absolute;
+    left: 100px;
+    top: 35px;
+}
+#fotnsidetext
+{
+    position: relative;
+    left: 30%;
+    margin-top: 300px;
+    font-weight: 700;
+}
+#backsidetext
+{
+    position: relative;
+    left: 30%;
+    margin-top: 300px;
+    font-weight: 700;
+}
+.backpic
+{
+    background-color: white;
+    border: 2px solid black;
+    border-style: dotted;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,10%);
+    cursor: pointer;
+    user-select: none;
+}
+/*capture image*/
+#captureimage
+{
+    width: 130px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.webcamdiv
+{
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    display: flex;
+}
+#captureimage
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(10%,-50%);
+}
+#captureimage1
+{   width: 130px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    transform: translate(10%,-70%);
+    display: none;
+}
+#canvas
+{
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.startverfiydiv
+{
+    width: 600px;
+    height: 600px;
+    overflow-y: scroll;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,25%);
+    border-radius: 5px;
+}
+.grpdis
+{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.startverification
+{
+    width: 140px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+   position: absolute;
+   top: 90%;
+   left: 37%;
+}
+#verificationstatus
+{
+    position: absolute;
+   top: 80%;
+   left: 50%;
+   transform: translate(-50%);
+   font-size: 1.3rem;
+   font-weight: 700;
+   color: green;
+   display: none;
+}

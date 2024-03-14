@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents-Upload</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/3949771dc3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        
+        <div class="navbarleft">
+            <!-- <img src="./images/logo.png" alt=""> -->
+            <a href="">Accounts</a>
+            <a href="">Deposits</a>
+            <a href="">Payments</a>
+            <a href="">Cards</a>
+            <a href="">Loans</a>
+            <a href="">Investments</a>
+            <a href="">Services</a>
+            <div class="showoff">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+                <div class="profile"><p style="text-align: center; margin-top:5px;color:black;font-weight:200" id="profilename"></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="documentshero">
+        <div class="mainhead"><h1 style=color:#002080>Upload The Following Documents</h1></div>
+        <div class="selectdocumenttype">
+            <select name="documents" id="documentsselect">
+                <option >--Choose A Document--</option>
+                <option value="Aadhaar Card">Aadhaar Card</option>
+                <option value="Pan Card">Pan Card</option>
+                <option value="Drivers License">Drivers License</option>
+            </select>
+            <button class="confirm" id="confirm">Submit</button>
+        </div>
+        <div class="sectiontoupload" id="sectiontoupload">
+            <span id="fotnsidetext">Upload Front Side Of The Document</span>
+            <div class="frontpic">
+                <div class="inititaldiv" id="inititaldiv1">
+                    <input type="file" id="frontchoosefile"><img id="imageupload" src="Resources/png-clipart-upload-icon-line-angle-symbol-font-upload-angle-symbol-thumbnail-removebg-preview.png">
+                </div>
+            </div>
+            <br>
+            <span id="backsidetext">Upload Back Side Of The Document</span>
+            <div class="backpic">
+                <div class="inititaldiv" id="inititaldiv2">
+                    <input type="file" id="backchoosefile"><img id="imageupload" src="Resources/png-clipart-upload-icon-line-angle-symbol-font-upload-angle-symbol-thumbnail-removebg-preview.png">
+                </div>
+            </div>
+        </div>
+         <button id="contninuetonextbtn">Next Step</button>
+    </div>
+</body>
+<script type="module" src="homepage.js"></script>
+<script>
+    document.getElementById("contninuetonextbtn").addEventListener("click",function()
+    {
+        window.open("opencamera.html","_parent");
+    })
+</script>
+</html>
