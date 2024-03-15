@@ -1,12 +1,12 @@
-# Deadline Teck - Online Video KYC Automation Platform
+# Deadline Tech - Online Video KYC Automation Platform
 
-Welcome to the Deadline Teck team's project repository for the Standard Chartered Hackathon! Our team has reimagined the Online Video KYC process. 
+Welcome to the Deadline Tech team's project repository for the Standard Chartered Hackathon! Our team has reimagined the Online Video KYC process. 
 
 ## Demo Video
 You can watch our demo video [here](https://screenrec.com/share/mLgsyE5lNO).
 
 ## Problem Statement 🛠️
-Traditional KYC methods are primarily offline or non-interactive online, presenting challenges like manual processes, lack of user engagement, and inclusivity issues across languages and generations. Our aim is to create an intuitive and inclusive online Video KYC process that captures essential user details in a conversational manner.
+Traditional KYC methods are primarily offline or non-interactive online, presenting challenges like manual processes, lack of user engagement, and inclusivity issues across languages and generations. We aim to create an intuitive and inclusive online Video KYC process that conversationally captures essential user details.
 
 ## Solution 💪🏽
 Our platform streamlines the Video KYC process using HTML, CSS, JS, and Firebase. It first gathers essential user details through an intuitive and interactive interface. Users can upload and capture their card details, including PAN card/Aadhaar, and the platform verifies this information for accuracy and validity. Additionally, our platform incorporates Facial Authentication for enhanced security and PAN Photo Capture for verifying identity details.
@@ -33,7 +33,7 @@ Our platform streamlines the Video KYC process using HTML, CSS, JS, and Firebase
 - Ponsaranya R (RA2111031010082)
 
 ## Tech Stack 💻
-- Frontend: HTML, CSS, JS
+- Frontend: HTML, CSS, JS , JSON
 - Backend: Firebase
 
 ## Conclusion
