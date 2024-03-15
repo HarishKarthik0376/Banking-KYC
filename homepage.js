@@ -70,7 +70,7 @@ import {getStorage, ref as storageRef, uploadBytes} from "https://www.gstatic.co
         //database
         set(ref(database, 'userdocuments/'+user.uid),
         {   
-            typeofproof:document.getElementById("confirm").value
+            typeofproof:document.getElementById("documentsselect").value
         })
         .then( () =>{
             console.log("done");
