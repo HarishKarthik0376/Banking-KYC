@@ -1,25 +1,27 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getAuth,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 import { getDatabase, ref,onValue,set } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import {getStorage, ref as storageRef, uploadBytes} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js"
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDiB0CIJQ11qRk_QftVaWtIk-bH58K8o5M",
-  authDomain: "kycverification-dbee2.firebaseapp.com",
-  databaseURL: "https://kycverification-dbee2-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "kycverification-dbee2",
-  storageBucket: "kycverification-dbee2.appspot.com",
-  messagingSenderId: "298818644287",
-  appId: "1:298818644287:web:60cabbb085e0e1d49f4b8a"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyDiB0CIJQ11qRk_QftVaWtIk-bH58K8o5M",
+    authDomain: "kycverification-dbee2.firebaseapp.com",
+    databaseURL: "https://kycverification-dbee2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "kycverification-dbee2",
+    storageBucket: "kycverification-dbee2.appspot.com",
+    messagingSenderId: "298818644287",
+    appId: "1:298818644287:web:60cabbb085e0e1d49f4b8a"
+  };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const auth = getAuth();
   const database = getDatabase(app);
+  const storage = getStorage(app);
 
   var profilename = document.getElementById("profilename");
   var imageurl;
@@ -43,17 +45,31 @@ const firebaseConfig = {
         fileselector.onchange =  () =>
         {
         file = fileselector.files[0];
-        imageurl = window.URL.createObjectURL(new Blob([file],{type: 'image/jpg' }));
+        //storagebucketforfrontfile
+        const mountainsRef = storageRef(storage, 'docs/'+user.uid+'/front');
+        uploadBytes(mountainsRef, file).then((snapshot) => {
+          console.log('Uploaded a blob or file!');
+        }).catch((error) => {
+          console.error('Error uploading file:', error);
+        });
+        
         }
         })
         const fileselector1 = document.querySelector('#backchoosefile');
+        //backfile
         fileselector1.onchange =  () =>
         {
         file1 = fileselector1.files[0];
-        var imageurl1 = window.URL.createObjectURL(new Blob([file1],{type: 'image/jpg' }));
+        //storagebucketforbackfile
+        const mountainsRef = storageRef(storage, 'docs/'+user.uid+"/back");
+        uploadBytes(mountainsRef, file1).then((snapshot) => {
+          console.log('Uploaded a blob or file!');
+        }).catch((error) => {
+          console.error('Error uploading file:', error);
+        });
+        //database
         set(ref(database, 'userdocuments/'+user.uid),
-        {   frontimage:imageurl,
-            backimage:imageurl1,
+        {   
             typeofproof:document.getElementById("confirm").value
         })
         .then( () =>{

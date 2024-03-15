@@ -1,25 +1,27 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getAuth,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 import { getDatabase, ref,onValue,set } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import {getStorage, ref as storageRef, getDownloadURL} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js"
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDiB0CIJQ11qRk_QftVaWtIk-bH58K8o5M",
-  authDomain: "kycverification-dbee2.firebaseapp.com",
-  databaseURL: "https://kycverification-dbee2-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "kycverification-dbee2",
-  storageBucket: "kycverification-dbee2.appspot.com",
-  messagingSenderId: "298818644287",
-  appId: "1:298818644287:web:60cabbb085e0e1d49f4b8a"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyDiB0CIJQ11qRk_QftVaWtIk-bH58K8o5M",
+    authDomain: "kycverification-dbee2.firebaseapp.com",
+    databaseURL: "https://kycverification-dbee2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "kycverification-dbee2",
+    storageBucket: "kycverification-dbee2.appspot.com",
+    messagingSenderId: "298818644287",
+    appId: "1:298818644287:web:60cabbb085e0e1d49f4b8a"
+  };
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const auth = getAuth();
   const database = getDatabase(app);
+  const storage = getStorage(app);
 
   var profilename = document.getElementById("profilename");
   var nametodis = document.getElementById("displayname");
@@ -44,6 +46,7 @@ const firebaseConfig = {
          nametodis.innerHTML = name;
         }
     })
+   
       const anotheref = ref(database, 'userfirststep/' + userID);
       onValue(anotheref, (snapshot) => {
         const profdata = snapshot.val();
@@ -68,22 +71,31 @@ const firebaseConfig = {
         if (profdata) {
           const client = profdata; 
           const typeofdoc1 = client.typeofproof;
-          const frontpic = client.frontimage;
-          imagetocheck = frontpic;
-          console.log(imagetocheck);
           typeofdoc.innerHTML = typeofdoc1;
-          document.getElementById("imgtoshow").src = "data:image/png;base64"+imagetocheck;
         }
       });
-
+      getDownloadURL(storageRef(storage, 'docs/'+user.uid+'/front'))
+      .then((url) => {
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob';
+        xhr.onload = (event) => {
+          const blob = xhr.response;
+        };
+        xhr.open('GET', url);
+        xhr.send();
+        const img = document.getElementById('myimg');
+        document.getElementById("imgtoshow").src = url;
+      })
+      .catch((error) => {
+        console.log("error!!");
+      });
   document.getElementById("startverification").addEventListener("click",function()
   {
     document.getElementById("startverification").style.display = "none";
-    document.getElementById("imgtoshow").src = imagetocheck;
     const progress = document.getElementById("verificationstatus");
     progress.style.display = "block";
     const worker = new Tesseract.TesseractWorker();
-    worker.recognize(imagetocheck)
+    worker.recognize(document.getElementById("imgtoshow"))
     .progress(function(response)
     {
         progress.innerHTML = response.status;
