@@ -2,6 +2,9 @@
 
 Welcome to the Deadline Teck team's project repository for the Standard Chartered Hackathon! Our team has reimagined the Online Video KYC process. 
 
+## Demo Video
+You can watch our demo video [here](https://screenrec.com/share/mLgsyE5lNO).
+
 ## Problem Statement 🛠️
 Traditional KYC methods are primarily offline or non-interactive online, presenting challenges like manual processes, lack of user engagement, and inclusivity issues across languages and generations. Our aim is to create an intuitive and inclusive online Video KYC process that captures essential user details in a conversational manner.
 
