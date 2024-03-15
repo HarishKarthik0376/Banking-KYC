@@ -3,9 +3,11 @@
 Welcome to the Deadline Tech team's project repository for the Standard Chartered Hackathon! Our team has reimagined the Online Video KYC process. 
 
 ## Demo Video
-You can watch our demo video [here](https://screenrec.com/share/mLgsyE5lNO).
+You can watch our demo video [here](https://screenrec.com/share/DSULgq5yY8).
 
-https://github.com/gr2100/Banking-KYC/assets/103631083/3cec81e3-e8f0-4fa8-aeb6-779e15e747ec
+
+https://github.com/gr2100/Banking-KYC/assets/103631083/06f48b74-0be9-4f14-8914-05a04de66673
+
 
 
 ## Problem Statement 🛠️
