@@ -5,6 +5,9 @@ Welcome to the Deadline Tech team's project repository for the Standard Chartere
 ## Demo Video
 You can watch our demo video [here](https://screenrec.com/share/mLgsyE5lNO).
 
+https://github.com/gr2100/Banking-KYC/assets/103631083/3cec81e3-e8f0-4fa8-aeb6-779e15e747ec
+
+
 ## Problem Statement 🛠️
 Traditional KYC methods are primarily offline or non-interactive online, presenting challenges like manual processes, lack of user engagement, and inclusivity issues across languages and generations. We aim to create an intuitive and inclusive online Video KYC process that conversationally captures essential user details.
 
